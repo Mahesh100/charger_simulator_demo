@@ -5,15 +5,14 @@ import io.micronaut.http.annotation.*;
 @Controller("/hello")
 class HelloController {
 
-//    @Get(uri="/", produces="text/plain")
-//    public String index() {
-//
-//        return "Example Response";
-
-
         @Get(uri="/message", produces="text/plain")
-         public String message(){
-            return  "Welcome";
+        public String message(){
+            return  "Welcome"+" ";
+        }
+
+        @Get("/employee")
+        public Employee getEmployee(){
+            return new Employee( 101,"Mahesh" );
 
         }
 

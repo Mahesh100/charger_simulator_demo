@@ -1,4 +1,4 @@
-package micronaut.example.javatechie;
+package micronaut.example;
 
 import io.micronaut.http.annotation.*;
 

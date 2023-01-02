@@ -1,4 +1,4 @@
-package micronaut.example.javatechie;
+package micronaut.example;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.client.HttpClient;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;

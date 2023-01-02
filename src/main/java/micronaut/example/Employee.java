@@ -1,4 +1,4 @@
-package micronaut.example.javatechie;
+package micronaut.example;
 
 import jakarta.inject.Singleton;
 
@@ -14,6 +14,7 @@ public class Employee {
 
     public Employee(int id, String name) {
         this.id = id;
+        this.name=name;
     }
 
     public void setName(String name) {

@@ -19,7 +19,7 @@
     <release.version>11</release.version>
     <micronaut.version>3.7.5</micronaut.version>
     <micronaut.runtime>netty</micronaut.runtime>
-    <exec.mainClass>micronaut.example.javatechie.Application</exec.mainClass>
+    <exec.mainClass>micronaut.example.Application</exec.mainClass>
   </properties>
 
   <repositories>

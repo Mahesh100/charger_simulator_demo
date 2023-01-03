@@ -6,6 +6,7 @@
 - [Micronaut Guides](https://guides.micronaut.io/index.html)
 ---
 
+- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
 ## Feature http-client documentation
 
 - [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)

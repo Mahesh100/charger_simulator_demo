@@ -1,4 +1,4 @@
-package micronaut.example;
+package Charger.Simulator.demo;
 
 import io.micronaut.runtime.Micronaut;
 

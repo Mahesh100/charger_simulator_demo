@@ -1,6 +1,6 @@
 applicationType: default
-defaultPackage: micronaut.example.javatechie
+defaultPackage: Charger.Simulator.demo
 testFramework: junit
 sourceLanguage: java
-buildTool: maven
-features: [annotation-api, app-name, http-client, jackson-databind, java, java-application, junit, logback, maven, netty-server, readme, shade, yaml]
+buildTool: gradle
+features: [annotation-api, app-name, gradle, http-client, jackson-databind, java, java-application, junit, logback, micronaut-build, netty-server, readme, shade, yaml]

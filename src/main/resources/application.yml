@@ -1,7 +1,6 @@
 micronaut:
   application:
-    name: micronautExampleJavatechie
-      #server.port=9090
+    name: chargerSimulatorDemo
 netty:
   default:
     allocator:

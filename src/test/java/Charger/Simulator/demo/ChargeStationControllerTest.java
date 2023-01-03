@@ -1,4 +1,4 @@
-package micronaut.example;
+package Charger.Simulator.demo;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.client.HttpClient;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
@@ -8,7 +8,7 @@ import jakarta.inject.Inject;
 import static org.junit.jupiter.api.Assertions.*;
 
 @MicronautTest
-public class HelloControllerTest {
+public class ChargeStationControllerTest {
 
     @Inject
     @Client("/")
@@ -16,6 +16,6 @@ public class HelloControllerTest {
 
     @Test
     public void testIndex() throws Exception {
-        assertEquals(HttpStatus.OK, client.toBlocking().exchange("/hello/message").status());
+        assertEquals(HttpStatus.OK, client.toBlocking().exchange("/chargeStation/message/charger").status());
     }
 }

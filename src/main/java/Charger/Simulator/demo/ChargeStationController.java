@@ -1,4 +1,4 @@
-package Charger.Simulator.demo;
+package charger.Simulator.demo;
 
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.*;

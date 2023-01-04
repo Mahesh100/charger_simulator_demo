@@ -1,6 +1,8 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("io.micronaut.application") version "3.6.7"
+    id ("groovy")
+
 }
 
 version = "0.1"
@@ -11,13 +13,26 @@ repositories {
 }
 
 dependencies {
+    //implementation 'org.codehaus.groovy:groovy-all:3.0.14'
     annotationProcessor("io.micronaut:micronaut-http-validation")
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-jackson-databind")
-    implementation("jakarta.annotation:jakarta.annotation-api")
+    implementation('jakarta.annotation:jakarta.annotation-api:2.1.0')
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-validation")
 
+    // https://mvnrepository.com/artifact/org.spockframework/spock-core
+    testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.4-M1-groovy-3.0'
+
+    // https://mvnrepository.com/artifact/org.spockframework/spock-spring
+    //testImplementation group: 'org.spockframework', name: 'spock-spring', version: '2.4-M1-groovy-4.0'
+
+    // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
+    //implementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.16', ext: 'pom'
+
+
+
+//    implementation()
 }
 
 
@@ -32,6 +47,7 @@ java {
 graalvmNative.toolchainDetection = false
 micronaut {
     runtime("netty")
+    apply plugin: 'groovy'
     testRuntime("junit5")
     processing {
         incremental(true)

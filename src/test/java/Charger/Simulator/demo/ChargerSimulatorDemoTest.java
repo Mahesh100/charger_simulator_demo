@@ -1,4 +1,4 @@
-package charger.Simulator.demo;
+package Charger.Simulator.demo;
 
 import io.micronaut.runtime.EmbeddedApplication;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;

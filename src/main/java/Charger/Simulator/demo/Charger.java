@@ -1,13 +1,18 @@
-package Charger.Simulator.demo;
+package charger.Simulator.demo;
 
 import jakarta.inject.Singleton;
 
 @Singleton
 public class Charger {
 
+   // Charger charger = new Charger();
     private int id;
 
     private String status;
+
+//    public Charger() {
+//
+//    }
 
     public void setStatus(String status) {
         this.status = status;

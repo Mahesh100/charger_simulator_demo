@@ -1,4 +1,4 @@
-package charger.Simulator.demo;
+package Charger.Simulator.demo;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.client.HttpClient;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
@@ -16,6 +16,6 @@ public class ChargeStationControllerTest {
 
     @Test
     public void testIndex() throws Exception {
-        Assertions.assertEquals(HttpStatus.OK, client.toBlocking().exchange("/chargeStation/message/charger").status());
+        assertEquals(HttpStatus.OK, client.toBlocking().exchange("/chargeStation/message/charger").status());
     }
 }

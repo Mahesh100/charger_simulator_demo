@@ -1,4 +1,5 @@
-package Charger.Simulator.demo;
+package charger.Simulator.java;
+
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.client.HttpClient;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
@@ -8,7 +9,7 @@ import jakarta.inject.Inject;
 import static org.junit.jupiter.api.Assertions.*;
 
 @MicronautTest
-public class ChargeStationControllerTest {
+class ChargeStationControllerTest {
 
     @Inject
     @Client("/")

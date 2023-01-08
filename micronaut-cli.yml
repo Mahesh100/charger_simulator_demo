@@ -1,6 +1,6 @@
 applicationType: default
-defaultPackage: Charger.Simulator.demo
+defaultPackage: com.micronaut
 testFramework: junit
 sourceLanguage: java
 buildTool: gradle
-features: [annotation-api, app-name, gradle, http-client, jackson-databind, java, java-application, junit, logback, micronaut-build, netty-server, readme, shade, yaml]
+features: [annotation-api, app-name, assertj, data, data-jpa, gradle, http-client, jackson-databind, java, java-application, jdbc-hikari, junit, logback, lombok, micronaut-build, netty-server, postgres, readme, shade, testcontainers, yaml]

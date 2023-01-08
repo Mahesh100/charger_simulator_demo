@@ -1,43 +1,38 @@
 plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("io.micronaut.application") version "3.6.7"
-    id ("groovy")
-
 }
 
 version = "0.1"
-group = "Charger.Simulator.demo"
+group = "com.micronaut"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    //implementation 'org.codehaus.groovy:groovy-all:3.0.14'
+    annotationProcessor("org.projectlombok:lombok")
+    annotationProcessor("io.micronaut.data:micronaut-data-processor")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-jackson-databind")
-    implementation('jakarta.annotation:jakarta.annotation-api:2.1.0')
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+    implementation("jakarta.annotation:jakarta.annotation-api")
+    compileOnly("org.projectlombok:lombok")
     runtimeOnly("ch.qos.logback:logback-classic")
+    runtimeOnly("org.postgresql:postgresql")
+    testImplementation("org.assertj:assertj-core")
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation("org.testcontainers:postgresql")
+    testImplementation("org.testcontainers:testcontainers")
     implementation("io.micronaut:micronaut-validation")
 
-    // https://mvnrepository.com/artifact/org.spockframework/spock-core
-    testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.4-M1-groovy-3.0'
-
-    // https://mvnrepository.com/artifact/org.spockframework/spock-spring
-    //testImplementation group: 'org.spockframework', name: 'spock-spring', version: '2.4-M1-groovy-4.0'
-
-    // https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all
-    //implementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.16', ext: 'pom'
-
-
-
-//    implementation()
 }
 
 
 application {
-    mainClass.set("Charger.Simulator.demo.Application")
+    mainClass.set("com.micronaut.Application")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("11")
@@ -47,11 +42,10 @@ java {
 graalvmNative.toolchainDetection = false
 micronaut {
     runtime("netty")
-    apply plugin: 'groovy'
     testRuntime("junit5")
     processing {
         incremental(true)
-        annotations("Charger.Simulator.demo.*")
+        annotations("com.micronaut.*")
     }
 }
 

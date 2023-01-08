@@ -1,4 +1,4 @@
-package charger.Simulator.java;
+package com.micronaut;
 
 import io.micronaut.runtime.EmbeddedApplication;
 import io.micronaut.test.extensions.junit5.annotation.MicronautTest;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import jakarta.inject.Inject;
 
 @MicronautTest
-public class ChargerSimulatorDemoTest {
+class MyApplicationTest {
 
     @Inject
     EmbeddedApplication<?> application;

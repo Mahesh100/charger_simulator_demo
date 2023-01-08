@@ -1,6 +1,20 @@
 micronaut:
   application:
-    name: chargerSimulatorDemo
+    name: myApplication
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: ''
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+    dialect: POSTGRES
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
 netty:
   default:
     allocator:

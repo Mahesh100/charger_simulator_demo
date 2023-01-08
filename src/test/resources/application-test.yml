@@ -1,0 +1,15 @@
+#datasources:
+#  default:
+#    url: jdbc:tc:postgresql:12:///postgres
+#    driver-class-name: org.test containers.jdbc.ContainerDatabaseDriver
+
+
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/blogdb
+    driverClassName: org.postgresql.Driver
+    username: user
+    password: password
+    schema-generate: CREATE_DROP
+    dialect: POSTGRES
+jpa.default.properties.hibernate.hbm2ddl.auto: update
